@@ -50,9 +50,11 @@ traffic, and the Discord connection does not count. Pick one:
 * **GitHub Actions (included)** — `.github/workflows/keepalive.yml`
   pings the bot every 10 minutes. Add a repository variable named
   `HEALTH_URL` with the value `https://redshift-gofer.onrender.com/health`
-  (Settings → Secrets and variables → Actions → Variables). Free on
-  public repositories; private repositories get 2,000 minutes a month,
-  which is plenty for a ping every 10 minutes.
+  (Settings → Secrets and variables → Actions → Variables). Minutes are
+  free and unlimited on **public** repositories. On a private repository
+  the included 2,000 minutes a month are not enough for a ping every 10
+  minutes — use one of the two options below instead, or make the
+  repository public (the bot token is not in it).
 * **cron-job.org** — free, no account needed beyond the site, one
   request a minute. Point it at `https://redshift-gofer.onrender.com/health`.
 * **UptimeRobot** — free tier checks every 5 minutes and emails you if
