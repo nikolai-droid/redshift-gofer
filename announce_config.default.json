@@ -1,0 +1,151 @@
+{
+  "events": {
+    "crimson_moon": {
+      "label": "Crimson Moon",
+      "emoji": "🌙",
+      "color": "#b0173a",
+      "slots": [
+        "05:00",
+        "13:00",
+        "21:00"
+      ],
+      "dur": 60,
+      "needs_time": true
+    },
+    "egg_hunt": {
+      "label": "Egg Hunt",
+      "emoji": "🥚",
+      "color": "#f2c94c",
+      "slots": [
+        "07:00",
+        "15:00",
+        "23:00"
+      ],
+      "dur": 60,
+      "needs_time": true
+    },
+    "dragon": {
+      "label": "Dragon Round",
+      "emoji": "🐉",
+      "color": "#e67e22",
+      "slots": [
+        "00:00",
+        "08:00",
+        "16:00"
+      ],
+      "dur": 60,
+      "needs_time": true
+    },
+    "spider": {
+      "label": "Spider Round",
+      "emoji": "🕷️",
+      "color": "#7f8c8d",
+      "slots": [
+        "00:00",
+        "08:00",
+        "16:00"
+      ],
+      "dur": 60,
+      "needs_time": true
+    },
+    "dragon_share": {
+      "label": "Dragon Sharing Agreement",
+      "emoji": "🤝",
+      "color": "#2ecc71",
+      "slots": [
+        "00:00",
+        "08:00",
+        "16:00"
+      ],
+      "dur": 60,
+      "needs_time": true
+    },
+    "general": {
+      "label": "General Announcement",
+      "emoji": "📣",
+      "color": "#95a5a6",
+      "slots": [],
+      "dur": 0,
+      "needs_time": false
+    },
+    "diplomacy": {
+      "label": "Diplomacy",
+      "emoji": "🤝",
+      "color": "#2ecc71",
+      "slots": [],
+      "dur": 0,
+      "needs_time": false
+    },
+    "reset": {
+      "label": "Reset at UTC 00:00",
+      "emoji": "⌛",
+      "color": "#95a5a6",
+      "slots": [
+        "00:00"
+      ],
+      "dur": 60,
+      "needs_time": true
+    }
+  },
+  "blocks": {
+    "objective": {
+      "label": "Objective",
+      "emoji": "🎯",
+      "section": "🎯 Objectives",
+      "hint": "Attack Gleem at the start, then return and defend Gloom",
+      "type": "text"
+    },
+    "step": {
+      "label": "Timed step",
+      "emoji": "⏱",
+      "section": "⏱ Timeline",
+      "hint": "Time in UTC + what happens",
+      "type": "step"
+    },
+    "morale": {
+      "label": "Morale",
+      "emoji": "😴",
+      "section": "😴 Morale",
+      "hint": "Save all morale for the dragon",
+      "type": "text"
+    },
+    "do": {
+      "label": "Do",
+      "emoji": "✅",
+      "section": "✅ Do",
+      "hint": "Keep our path to base clear",
+      "type": "text"
+    },
+    "dont": {
+      "label": "Don't",
+      "emoji": "❌",
+      "section": "❌ Don't",
+      "hint": "Do NOT attack Gloom",
+      "type": "text"
+    },
+    "diplomacy": {
+      "label": "Diplomacy",
+      "emoji": "🤝",
+      "section": "🤝 Diplomacy",
+      "hint": "We give Gloom to HK for 24 hours",
+      "type": "text"
+    },
+    "order": {
+      "label": "Slot order",
+      "emoji": "👥",
+      "section": "👥 Order / Slots",
+      "hint": "Name + minutes from event start, e.g. Japan 00:00-00:15",
+      "type": "order"
+    },
+    "note": {
+      "label": "Free note",
+      "emoji": "📝",
+      "section": "📝 Notes",
+      "hint": "",
+      "type": "text"
+    }
+  },
+  "role_pings": {},
+  "leader_role_ids": [],
+  "channel_id": null
+}

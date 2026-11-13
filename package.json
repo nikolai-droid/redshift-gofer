@@ -1,0 +1,17 @@
+{
+  "name": "discord-migrator",
+  "version": "1.0.0",
+  "description": "Discord bot: message migration and the clan-war announcement builder",
+  "main": "bot.js",
+  "type": "module",
+  "scripts": {
+    "bot": "node bot.js",
+    "start": "node migrator.js",
+    "dry-run": "DRY_RUN=true node migrator.js",
+    "test": "node test_announce.js && node test_manage.js && node test_commands.js && node check_limits.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1"
+  }
+}

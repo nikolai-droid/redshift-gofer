@@ -1,0 +1,33 @@
+# Render blueprint — deploy the bot on Render's free web service.
+#
+# Create the service with:  New > Blueprint > point it at this repo.
+# Render reads this file and fills in the form for you.
+#
+# The free plan spins the instance down after 15 minutes without inbound
+# traffic, so .github/workflows/keepalive.yml pings /health every 10
+# minutes. Nothing here costs money and no card is needed.
+services:
+  - type: web
+    name: redshift-gofer
+    runtime: node
+    plan: free
+    buildCommand: npm ci --omit=dev --no-audit --no-fund
+    startCommand: node bot.js
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      # Paste the bot token from the Discord Developer Portal.
+      - key: DISCORD_BOT_TOKEN
+        sync: false
+      # Paste the application id from the Developer Portal.
+      - key: DISCORD_APP_ID
+        sync: false
+      # Optional: only register the commands in one guild.
+      - key: DISCORD_GUILD_ID
+        sync: false
+      # The channel that holds the live configuration. Create a private
+      # channel in your server, paste its id here, and the bot keeps the
+      # configuration in it — that way it survives a restart even though
+      # the free container's disk is wiped.
+      - key: ANNOUNCE_CONFIG_CHANNEL_ID
+        sync: false

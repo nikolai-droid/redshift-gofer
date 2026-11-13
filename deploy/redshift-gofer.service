@@ -1,0 +1,27 @@
+[Unit]
+Description=RedShift's Gofer — clan war announcement bot
+Documentation=https://discord.com/developers/applications
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=redshift-bot
+WorkingDirectory=/opt/redshift-gofer
+EnvironmentFile=/opt/redshift-gofer/.env
+ExecStart=/usr/bin/node bot.js
+Restart=always
+RestartSec=5
+# Give the process a moment to finish a Discord reply before it is killed.
+KillSignal=SIGINT
+TimeoutStopSec=20
+
+# The bot only makes outbound connections (Discord gateway), so it needs
+# no inbound ports and no public IP.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

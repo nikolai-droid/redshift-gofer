@@ -1,0 +1,12 @@
+# Secrets — never commit the bot token
+.env
+
+# Live configuration, edited from Discord with /announce-config.
+# Kept out of git so that a code update never overwrites it.
+announce_config.json
+
+# Dependencies and scratch files
+node_modules/
+.temp/
+.DS_Store
+*.log
