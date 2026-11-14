@@ -99,11 +99,34 @@ off; and free ARM capacity in the popular regions is often sold out.
 
 ---
 
-## Option C — Keep it on your Mac
+## Option C — Keep it on a Mac
 
 Free and instant, but the bot only works while the Mac is awake and
-online. To stop it dying when you close the terminal, install it as a
-launchd service instead of running it in a window. The simplest version:
+online.
+
+### Install on another Mac
+
+```bash
+git clone https://github.com/nikolai-droid/redshift-gofer.git
+cd redshift-gofer
+bash deploy/setup-mac.sh
+```
+
+The script checks Node.js is 18 or newer, installs the dependencies,
+asks for the bot token and application id (both are in the Discord
+Developer Portal under your app → General Information), and installs
+the bot as a launchd service so it starts at login and restarts if it
+crashes.
+
+Watch the log with `tail -f /tmp/redshift-gofer.log`, stop the bot with
+`launchctl bootout gui/$UID/local.redshift.gofer`.
+
+To move the live configuration across from another machine, copy
+`announce_config.json` and `.env` into the clone — neither is in git.
+
+### Install by hand
+
+If you would rather write the launchd job yourself:
 
 ```bash
 cd /Users/nigelei/discord-migrator
